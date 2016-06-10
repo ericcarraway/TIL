@@ -9,3 +9,7 @@ Add `?w=1` to the URL to see the diff with whitespace ignored.
 * `POST` send a payload to create an entry from scratch
 * `PUT` send a payload to replace **_ALL_** of a preexisting entry
 * `PATCH` send a payload to replace **_PART_** of preexisting entry
+
+### Git Commit Messages
+* Messages wrap at the 72nd character mark
+* See also: _the “50/72" rule_

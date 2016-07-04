@@ -13,3 +13,19 @@ Add `?w=1` to the URL to see the diff with whitespace ignored.
 ### Git Commit Messages
 * Messages wrap at the 72nd character mark
 * See also: _the “50/72" rule_
+
+### module.exports a Value
+```
+// file: myModule.js
+module.exports = 'some example value';
+
+// file: myModule.spec.js
+var myModule = require('./myModule.js');
+var assert = require('chai').assert;
+
+describe('myModule', function () {
+    it('should load', function () {
+        assert.equal('some example value', myModule);
+    });
+});
+```

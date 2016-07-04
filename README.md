@@ -29,3 +29,21 @@ describe('myModule', function () {
     });
 });
 ```
+
+### module.exports a Function
+```
+// file: add.js
+module.exports = function (a, b) {
+    return a + b;
+};
+
+// file: add.spec.js
+var add = require('./add.js');
+var assert = require('chai').assert;
+
+describe('add', function () {
+    it('should add two numbers', function () {
+        assert.equal(23, add(20, 3));
+    });
+});
+```

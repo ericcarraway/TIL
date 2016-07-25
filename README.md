@@ -47,3 +47,22 @@ describe('add', function () {
     });
 });
 ```
+
+### stubby4node - Sequence of Responses
+* `response` property can be a _sequence_
+* Note the dashes (`YAML` array syntax)
+indicating two children under the `response` parent
+
+```
+-   request:
+        url: ^/api/example/1234/[\w_-]+/asdf$
+        method: PUT
+    response:
+    -   latency: 1500 # latency simulates API delay
+        status: 200
+        headers:
+            content-type: application/json
+        file: test/api-mocks/responses/example/asdf.json
+    -   status: 404 404 # second (even-numbered) request returns 404
+```
+https://github.com/mrak/stubby4node

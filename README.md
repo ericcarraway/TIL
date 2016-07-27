@@ -5,14 +5,33 @@ Today I Learned
 Ever have someone push a commit that involves a lot of real changes mixed in with a bunch of less-meaningful whitespace?
 Add `?w=1` to the URL to see the diff with whitespace ignored.
 
+---
+
 ### PUT vs. PATCH in RESTful APIs
 * `POST` send a payload to create an entry from scratch
 * `PUT` send a payload to replace **_ALL_** of a preexisting entry
 * `PATCH` send a payload to replace **_PART_** of preexisting entry
 
+---
+
+## Git
+
 ### Git Commit Messages
 * Messages wrap at the 72nd character mark
 * See also: _the “50/72" rule_
+
+### `git commit -n`
+* `-n` option bypasses the pre-commit and commit-msg hooks
+* Occasionally needed when committing a work-in-progress, if
+the `'karma:threshold'` pre-commit hook fails
+```
+ERROR [Threshold]: Failed minimum coverage threshold expectations
+```
+https://git-scm.com/docs/git-commit
+
+---
+
+## `module.exports` and `require`
 
 ### module.exports a Value
 ```
@@ -48,6 +67,8 @@ describe('add', function () {
 });
 ```
 
+---
+
 ### stubby4node - Sequence of Responses
 * `response` property can be a _sequence_
 * Note the dashes (`YAML` array syntax)
@@ -66,12 +87,3 @@ indicating two children under the `response` parent
     -   status: 404 404 # second (even-numbered) request returns 404
 ```
 https://github.com/mrak/stubby4node
-
-### `git commit -n`
-* `-n` option bypasses the pre-commit and commit-msg hooks
-* Occasionally needed when committing a work-in-progress, if
-the `'karma:threshold'` pre-commit hook fails
-```
-ERROR [Threshold]: Failed minimum coverage threshold expectations
-```
-https://git-scm.com/docs/git-commit

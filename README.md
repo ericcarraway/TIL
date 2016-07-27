@@ -66,3 +66,12 @@ indicating two children under the `response` parent
     -   status: 404 404 # second (even-numbered) request returns 404
 ```
 https://github.com/mrak/stubby4node
+
+### `git commit -n`
+* `-n` option bypasses the pre-commit and commit-msg hooks
+* Occasionally needed when committing a work-in-progress, if
+the `'karma:threshold'` pre-commit hook fails
+```
+ERROR [Threshold]: Failed minimum coverage threshold expectations
+```
+https://git-scm.com/docs/git-commit

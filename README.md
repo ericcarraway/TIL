@@ -87,3 +87,23 @@ indicating two children under the `response` parent
     -   status: 404 404 # second (even-numbered) request returns 404
 ```
 https://github.com/mrak/stubby4node
+
+---
+
+## CSS
+
+### Margin Property
+```
+margin: 10px                 // applies to all sides
+margin: 10px 20px            // 10 applies to top & bottom, 20 for left and right
+margin: 10px 20px 30px       // 10 for top only, 20 for left and right, 30 for bottom only
+margin: 10px 20px 30px 40px  // each side has a unique value
+```
+
+* Pneumonic for remembering the order:
+  * start at North (top) and then travel clockwise
+  * Top, Right, Bottom, Left
+* One opinion (code style) is to _always_ use the longhand version
+  * Listing all four values (even if some are the same) may be more maintainable (think `git diff`)
+  * While the one-value and four-value versions of this syntax are easily remembered,
+the two-value and three-value versions of this syntax are often forgotten

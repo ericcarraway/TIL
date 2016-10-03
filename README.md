@@ -100,7 +100,7 @@ margin: 10px 20px 30px       // 10 for top only, 20 for left and right, 30 for b
 margin: 10px 20px 30px 40px  // each side has a unique value
 ```
 
-* Pneumonic for remembering the order:
+* Mnemonic for remembering the order:
   * start at North (top) and then travel clockwise
   * Top, Right, Bottom, Left
 * One opinion (code style) is to _always_ use the longhand version
